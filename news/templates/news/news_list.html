@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}{% for item in object_list|slice:"1" %}{{ item.category}}{% endfor %}{% endblock %}
+
+{% block description %}{% for item in object_list %}{{ item.category.content | striptags | safe}}{% endfor %}{% endblock %}
+
+{% block sidebar %}
+
+<div class="col-sm" id="search">
+  <form class="well form-search" id="form-search" action="{% url 'search' %}">
+    <input type="text" class="span3 search-query" placeholder="Поиск статей..." name="search">
+    <button class="btn"> Найти </button>
+  </form>
+</div>
+
+{% include 'inc/_sidebar.html' %}
+
+{% endblock %}
+
+{% block content %}
+
+{% for item in object_list|slice:"1" %}
+<div class="card mb-3" id="main-list">
+  <div class="card-header">
+    <p id="category-list">Категория: <a href="{% url 'category' item.category.slug %}">{{ item.category }}</a></p>
+  </div>
+  <div class="card-header">
+    <p id="category-list">{{ item.category.content | safe }}</a></p>
+  </div>
+</div>
+{% endfor %}
+{% for item in object_list %}
+<div class="card mb-3" id="main-list">
+    <div class="card-body text-center" id="list-body">
+      <div class="media-list" id="card-list">
+        {% if item.photo %}
+        <a href="{{ item.get_absolute_url }}"><img src="{{ item.photo.url }}" alt="" width="370" height="270" id="img-list"></a>
+        {% endif %}
+        <div class="media-body">
+          <a href="{{ item.get_absolute_url }}"><h5 class="card-title">{{ item.title }}</h5></a>
+          <p class="card-text">{{ item.content | striptags | safe | linebreaks | truncatewords:50 }}</p>
+          <a href="{{ item.get_absolute_url }}" class="btn btn-primary" id="button-list">Читать далее...</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-muted">
+      {{ item.created_ad|date:"Y-m-d h:i" }}
+    </div>
+  </div>
+{% endfor %}
+{% endblock %}

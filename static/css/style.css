@@ -1,0 +1,1150 @@
+/* Bootstrap nav */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+#success-contact {
+    max-width: 100%;
+    margin-left: auto:
+    margin-right: auto;
+}
+
+#background {
+    background: linear-gradient(to bottom, #7b3f00, #f2f3f4);
+}
+
+#image {
+    background: url(img/bg.jpg) no-repeat;
+    background-size: cover;
+    max-width: 1420px;
+}
+
+#back-art {
+    max-width: 1420px;
+    background-color: #fff;
+}
+
+#opacity {
+    background: rgba(168,109,37,0.55);
+}
+
+/* Карусель фото и текст nav */
+
+#carouselExampleSlidesOnly {
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#carouselExampleSlidesOnly img {
+    width: 80%;
+    height: 80%;
+}
+
+@media screen and (max-width: 768px){
+	#carouselExampleSlidesOnly img {
+    width: 100%;
+    height: 100%;
+    }
+}
+
+#carouselExampleControls {
+    display: inline-block;
+    margin-top: 60px;
+    text-align: center;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#carouselExampleControls h4 p {
+    width: 0%;
+    height: auto;
+}
+
+/* logo nav and number */
+
+#rt-logo {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#rt-logo img {
+    width: 99%;
+    height: auto;
+}
+
+#number {
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#number a {
+    color: #fff;
+}
+
+/* Карусель текст nav */
+
+#transparent {
+    background: url(img/transparent_bg.png);
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    width: 99%;
+    flex-wrap:wrap;
+}
+
+#transparent h4 a {
+    color: #fff;
+
+}
+
+#transparent p {
+    color: #fff;
+}
+
+/* Search */
+
+#search {
+    width: 100%;
+}
+
+#form-search {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+#search > form > input {
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+    padding: 10px 5px;
+    font: bold 16px 'PT Sans Caption', sans-serif;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #fff;
+    border-radius: 5px;
+}
+
+#search > form > button {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #fff;
+    height: 40px;
+    width: 100px;
+    font: bold 15px Arial, Helvetica;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: rgba(181, 121, 0, 0.5);
+}
+
+#sidebar {
+    margin-bottom: 30px;
+}
+
+/* Menu */
+
+#menu ul {
+    margin-top: 60px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 30px;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+.nav-pills .nav-link {
+    border-radius: 30px;
+}
+
+#menu ul li a {
+    text-decoration: none !important;
+    color: #f2f2f2;
+    font-size:20px;
+}
+
+#menu ul li a:hover{
+    color: #fff;
+    box-shadow: inset 0 0 0 1px #fff;
+}
+
+
+/* Welcome */
+
+#welcome {
+    color: #fff;
+}
+
+#username {
+    color: #fff;
+}
+
+#username {
+    text-decoration: none;
+    padding: 4px;
+    font-size: 10x;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: all 500ms ease;
+    background: #8b0000;
+    box-shadow: inset 0 0 0 1px #fff;
+}
+
+#username:hover {
+    background: #fff;
+    color: black;
+    box-shadow: inset 0 0 0 1px #000000;
+}
+
+/* Отступ nav */
+#space {
+    max-width: 100%;
+    height: 50px;
+    background: rgba(168,109,37,0.55);
+}
+
+#space2 {
+    height: 20px;
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+#space3 {
+    height: 45px;
+    background: linear-gradient(to bottom, #7b3f00);
+}
+
+#space-4 {
+    height: 30px;
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    margin-top: -20px;
+}
+
+#space-5 {
+    height: 100px;
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#space-6 {
+    height: 30px;
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#space-7 {
+    height: 50px;
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#space-8 {
+    height: 100px;
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* <h1>САМЫЕ ПОПУЛЯРНЫЕ СТАТЬИ О МАГИИ</h1> Главная */
+
+.popular {
+    width: 100%;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.popular h2 {
+    max-width: 100%;
+    background-color: #fff;
+    color: #7b3f00;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: -1px;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+.popular-1 {
+    width: 100%;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.popular-1 {
+    max-width: 100%;
+    background-color: #fff;
+    color: #7b3f00;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: -8px;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+/* home_page */
+
+#col-m {
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap:wrap;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Статьи на главной "Популярные" */
+
+.media {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+.media-title img:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.media-title h5 {
+    text-align: center;
+    width: 200px;
+    color: #7b3f00;
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: 'Prata', serif;
+}
+
+.media-title h5:hover {
+    text-decoration: none;
+    color: #F08080;
+    transition: 1s;
+}
+
+.media a:hover {
+    text-decoration: none !important;
+    color: #8a6642;
+}
+
+.media-title img {
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
+/* Категории на главной "Популярные" */
+
+#popular-2 h3 {
+    max-width: 100%;
+    background-color: #fff;
+    color: #7b3f00;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: -1px;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+.main2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap:wrap;
+    background-color: #fff;
+}
+
+.media2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.media-title2 {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.media-title2 h5 {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    width: 220px;
+    color: #240935;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 10px;
+    transition: 1s;
+    opacity: 0.50;
+}
+
+.media-title2 h5:hover {
+    text-decoration: none;
+    opacity: 0.99;
+    color: #240935;
+}
+
+.media-title2 img:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 10px;
+    transition: 1s;
+}
+
+.media2 a:hover {
+    text-decoration: none !important;
+    color: #8a6642;
+}
+
+.media-title2 img {
+    position: relative;
+    border-radius: 5px;
+    opacity: 0.65;
+    object-fit: cover;
+}
+
+.color-main {
+    position: relative;
+}
+
+/* Номер телефона в Nav */
+
+#caption {
+    text-align: center;
+    font-size: large;
+    font-family: 'times new roman', times;
+}
+
+/* Категория и счётчик просмотров */
+
+#category-list {
+    text-align: center;
+    margin: auto;
+}
+
+#button-list {
+    margin-top: auto;
+    margin-bottom: 5px;
+    margin-left: auto:
+    margin-right: auto;
+}
+
+#category {
+    margin-top: -20px;
+}
+
+/* Paginator */
+
+#paginator {
+    display: flex;
+    justify-content: center;
+}
+
+/* img, title list */
+
+#card-list {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#card-list img {
+    height: 18rem;
+}
+
+.media-list {
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+#img-list {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px){
+    #img-list {
+        width: 200%;
+        object-fit: cover;
+    }
+}
+
+/* news_detail */
+
+#cat-views {
+    display: flex;
+}
+
+#category-detail {
+    float: left;
+    margin: auto;
+}
+
+#views_detail {
+    float: right;
+    margin: auto;
+}
+
+#detail-h3 {
+    text-align: center;
+}
+
+.frame {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    height: 315px;
+}
+
+/* Other articles */
+
+.main-detail {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.detail {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+.media-detail img:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.media-detail h5 {
+    text-align: center;
+    max-width: 160px;
+    color: #7b3f00;
+    font-size: 20px;
+    font-family: 'Prata', serif;
+}
+
+.media-detail h5:hover {
+    text-decoration: none;
+    color: #F08080;
+    transition: 1s;
+}
+
+.detail a:hover {
+    text-decoration: none !important;
+    color: #8a6642;
+}
+
+.media-detail img {
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.media-body p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.media-body h5 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* About */
+
+#col-about {
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+#item-page {
+    color: #a8a8a8;
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#item-page h2 {
+    color: #a8a8a8;
+    margin-bottom: 20px;
+}
+
+#item-page img {
+    margin-bottom: 20px;
+}
+
+/* Contact */
+
+#col-contact {
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+#item-contact {
+    color: #a8a8a8;
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#about-p1 {
+    font-size: small;
+}
+
+.contact-links {
+    margin-top: 35px;
+}
+
+#legend {
+    margin-top: 35px;
+}
+
+
+.contact-contactinfo {
+    width: 100%;
+}
+
+
+.contact-icon {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#social-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#social-contact span {
+    margin-top: 10px;
+}
+
+.contact-miscinfo {
+    margin-top: 35px;
+}
+
+.color-contact {
+    position: relative;
+}
+
+
+.social a {
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    float: left;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    margin: 0 5px 5px 0;
+    padding: 6px;
+    color: #000;
+}
+
+.facebook a:hover {
+    background: #3b5998; color: #fff;
+}
+
+.odnoklassniki a:hover {
+    background: #f93; color: #fff;
+}
+
+.youtube a:hover {
+    background: #c4302b; color: #fff;
+}
+
+.vk a:hover {
+    background: #5d84ae; color: #fff;
+}
+
+.instagram a:hover {
+    background: #3f729b; color: #fff;
+}
+
+.whatsapp a:hover {
+    background: #50b154; color: #fff;
+}
+
+.telegram a:hover {
+    background: #249bd7; color: #fff;
+}
+
+/* Services */
+
+#col-services {
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+#item-services {
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#item-services h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.cat-children {
+    display: flex;
+    flex-flow: column;
+}
+
+.category-desc1 {
+    background-image: url(../css/img/img_services/love-magic.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.category-desc2 {
+    background-image: url(../css/img/img_services/magic-money.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.category-desc3 {
+    background-image: url(../css/img/img_services/black-magic.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.category-desc4 {
+    background-image: url(../css/img/img_services/practice-magic.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.category-desc5 {
+    background-image: url(../css/img/img_services/fortune-all.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+#img-service {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba( 0, 0, 0, 0.4);
+}
+
+#img-service3 {
+     width: 100%;
+     height: 100%;
+     display: inline-block;
+     background-color: rgba( 0, 0, 0, 0.2);
+}
+
+#img-service5 {
+     width: 100%;
+     height: 100%;
+     display: inline-block;
+     background-color: rgba( 0, 0, 0, 0.6);
+}
+
+#img-service3 h2 {
+    left: 0;
+    font-size: 45px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 5px;
+}
+
+#img-service5 h2 {
+    left: 0;
+    font-size: 45px;
+    top: 0;
+    width: 100%;
+    left: 5px;
+}
+
+#img-service h2 {
+    left: 0;
+    font-size: 45px;
+    top: 0;
+    width: 100%;
+    left: 5px;
+}
+
+#service-p {
+    left: 0;
+    font-size: 24px;
+    color: #fff;
+    top: 70px;
+    width: 100%;
+}
+
+#button-whatsapp {
+    font-size: 30px;
+    top: 120px;
+    left: 35%;
+    margin-bottom: 20px;
+}
+
+#button-viber {
+    font-size: 30px;
+    top: 120px;
+    left: 35%;
+    background-color: #665CAC;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#button-viber:hover {
+    font-size: 30px;
+    top: 120px;
+    left: 35%;
+    background-color: #3b5998;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#button-telegram {
+    font-size: 30px;
+    top: 120px;
+    left: 35%;
+    margin-bottom: 20px;
+}
+
+
+/* Review */
+
+#color-review {
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+#col-review {
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+#item-review {
+    color: #a8a8a8;
+    text-align: center;
+}
+
+.main-review {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.view-review {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.media-review h5 {
+    text-align: center;
+    color: #666;
+    font-size: 25px;
+}
+
+#review-content {
+    font-size: 20px;
+}
+
+#review-date {
+    font-size: 20px;
+}
+
+#review-h1 {
+    color: #666;
+}
+
+.review-sign {
+    display: flex;
+    justify-content: center;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    text-decoration: none !important;
+    font-size: 22px;
+}
+
+.review-sign img {
+    margin-left: 0 auto;
+}
+
+/* add-reviews */
+
+.color-add-reviews {
+    position: relative;
+}
+
+#col-add-reviews {
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+#item-add-reviews {
+    color: #a8a8a8;
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.add-reviews-div {
+    display: flex;
+    justify-content: center;
+}
+
+#button-add-reviews {
+    margin-bottom: 35px;
+}
+
+
+/* Видеоотзывы */
+
+.color-gallery {
+    position: relative;
+}
+
+#col-gallery {
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+#col-gallery h2 {
+    text-align: center;
+}
+
+.main-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.title-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    width: 100%;
+
+}
+
+.frame-vide-reviews {
+    width: 380px;
+    height: 215px;
+    margin: 10px;
+}
+
+/* Horoscope */
+
+.color-main-horoscope {
+    position: relative;
+}
+
+#col-horoscope {
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+#horoscope-flex {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.popular-horoscope {
+    width: 100%;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.popular-horoscope h2
+{
+    max-width: 100%;
+    color: #666;
+    text-align: center;
+    font-size: 36px;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+.main-horoscope {
+    width: 100%;
+    background-color: #fff;
+}
+
+.media-horoscope {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.media-horoscope a {
+
+    color: #F6A81D;
+}
+
+.media-horoscope h4 {
+
+    color: #666;
+}
+
+.media-horoscope a:hover {
+
+    color: #666;
+}
+
+.main-horoscope2 {
+    width: 100%;
+    background-color: #fff;
+}
+
+.media-horoscope2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.media-horoscope2 a {
+    color: #F6A81D;
+}
+
+.media-horoscope2 a:hover {
+    color: #666;
+}
+
+.media-horoscope2 h4 {
+    color: #666;
+}
+
+.month-horoscope {
+    text-align: center;
+}
+
+#main-card-horoscope {
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+
+#rt-logo-horoscope {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+#rt-logo-horoscope img {
+    width: 99%;
+    height: auto;
+}
+
+.main-horoscope-list h2 {
+    text-align: center;
+}
+
+.card-body-horoscope p {
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.horoscope-title h5 {
+    margin-left: 20px;
+    margin-right: 20px;
+}

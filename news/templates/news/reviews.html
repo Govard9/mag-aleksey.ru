@@ -1,0 +1,95 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(28215921, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/28215921" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="отзывы маг борисов алексей, маги красноярска, отзывы о магах красноярска, маги сибири, отзывы о магах сибири" />
+  <meta name="description" content="Отзывы о сибирском маге Борисове Алексее Борисовиче." />
+
+  <link rel="shortcut icon" type="image/png" href="{% static 'icons/favicon.ico' %}"/>
+
+  <title>Отзывы</title>
+
+{% include 'inc/_nav.html' %}
+
+</head>
+
+<body>
+
+<div class="color-review">
+    <div id="col-review">
+        <div id="item-review">
+        <h2 id="review-h1">Маг Борисов Алексей Борисович отзывы</h2>
+            <div class="main-review">
+                <a class="review-sign" href="{% url 'add_reviews' %}"><strong>Добавить отзыв<img src="{{ item.get_absolute_url }}/media/icons/review.png" alt="" height="35" width="35"></strong></a>
+                {% for item in review %}
+                <div class="view-review">
+                    <div class="media-review">
+                        <strong><h5>{{ item.name }}</h5></strong>
+                        <p id="review-content">{{ item.content }}</p>
+                        <p id="review-date">{{ item.created_add }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+
+        {% if page_obj.has_other_pages %}
+        <nav aria-label="Page navigation example" id="paginator">
+            <ul class="pagination">
+
+                {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">Назад</a>
+                </li>
+                {% endif %}
+
+                {% for p in page_obj.paginator.page_range %}
+
+                {% if page_obj.number == p %}
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="?page={{ p }}">{{ p }}<span class="sr-only">(current)</span></a>
+                </li>
+                {% elif p > page_obj.number|add:-3 and p < page_obj.number|add:3 %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ p }}">{{ p }}</a>
+                </li>
+                {% endif %}
+
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Вперед</a>
+                </li>
+                {% endif %}
+
+            </ul>
+        </nav>
+        {% endif %}
+
+    </div>
+</div>
+<div id="space-7">
+
+	</div>
+</body>

@@ -1,0 +1,137 @@
+<!doctype html>
+{% load static recaptcha3 %}
+<html lang="ru">
+<head>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(28215921, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/28215921" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="маг, магия, сибирская магия, борисов алексей, борисов алексей борисович, маг борисов алексей борисович отзывы, маг борисов, сибирский маг борисов алексей борисович, белый маг, сибирский маг, белая магия, любовная магия, магия любви, приворот в красноярске, приворот по фотографии, любовный приворот, приворожить парня, вернуть мужа, отворот, гадание, таро, предсказания, порча, снятие порчи, сглаз, снятие сглаза, сексуальная привязка, заговоры, благополучие, семья, возврат мужа, возврат жены, сильный приворот, вуду, деньги, наказать обидчика, устранение соперницы, устранение соперника, сделать приворот самостоятельно, кладбищенский приворот, отсуда, черное венчание, черное венчание, отзывы о магах, маги Красноярска, экстрасенсы красноярск отзывы, гадалка красноярск отзывы, хорошая гадалка красноярск отзывы, ясновидящая красноярск отзывы, бабушка гадалка красноярск отзывы, экстрасенсы в красноярске, приворот в сша, приворот в англии, приворот во франции, mag borisov, mag borisov aleksey, mag borisov aleksey borisovich, mag borisov aleksey borisovich otzyvy," />
+  <meta name="description" content="Сибирский белый маг Алексей Борисович Борисов поможет вам справиться с любыми жизненными проблемами. На сайте вы можете найти необходимую информацию об услугах, контактную информацию, посетить магический интернет-магазин, а также прочитать интересные статьи о магии."/>
+
+  <link rel="shortcut icon" type="image/png" href="{% static 'icons/favicon.ico' %}"/>
+
+  <title>Мои контакты</title>
+
+{% recaptcha_init %}
+{% recaptcha_ready action_name='homepage' %}
+
+</head>
+
+{% include 'inc/_nav.html' %}
+
+<body>
+
+<div class="color-contact">
+	<div id="col-contact">
+
+		<div id="item-contact">
+			<h1>Мои контакты</h1>
+			<div class="contact-contactinfo">
+
+			<div class="widget-container">
+				<h2 class="elementor-heading-title">
+					<a href="tel:+79029230803"><b><strong>+7(902)-923-08-03</strong></b></a>
+				</h2>
+					<div class="contact-icon">
+						<div class="social facebook">
+							<a href="https://www.facebook.com/alexey.borisov.311" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+						</div>
+
+						<div class="social odnoklassniki">
+							<a href="https://ok.ru/profile/314866298611" target="_blank"><i class="fa fa-odnoklassniki fa-2x"></i></a>
+						</div>
+
+						<div class="social youtube">
+							<a href="https://www.youtube.com/channel/UCBngLKEtYHjcGXgr2mrt8dA/videos" target="_blank"><i class="fa fa-youtube fa-2x"></i></a>
+						</div>
+
+						<div class="social vk">
+							<a href="https://vk.com/mag_borisov_aleksey_borisovich" target="_blank"><i class="fa fa-vk fa-2x"></i></a>
+						</div>
+
+						<div class="social instagram">
+							<a href="https://www.instagram.com/magborisov/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+						</div>
+
+						<div class="social whatsapp">
+							<a href="https://api.whatsapp.com/send?phone=79029230803" target="_blank"><i class="fa fa-whatsapp fa-2x"></i></a>
+						</div>
+
+						<div class="social telegram">
+							<a href="https://t.me/Aleksey_Mag" target="_blank"><i class="fa fa-paper-plane fa-2x"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="title-gallery">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/11FzZtuTZfw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+
+				<div id="legend">
+					<h3>Форма обратной связи</h3>
+					<legend>Опишите вашу проблему и отправьте мне через форму ниже. Все поля являются обязательными к заполнению.</legend>
+				</div>
+
+				<div class="col-md-9" id="success-contact">
+
+					{% if messages %}
+
+					{% for message in messages %}
+
+					{% if message.tags  == 'error' %}
+					<div class="alert danger" role="alert">
+						{{ message }}
+					</div>
+					{% else %}
+					<div class="alert alert-{{ message.tags }}" role="alert">
+						{{ message }}
+					</div>
+					{% endif %}
+
+					{% endfor %}
+
+					{% endif %}
+				</div>
+
+				<div>
+					<form method="post">
+						{% csrf_token %}
+						{{ form.as_p }}
+						<button type="submit" class="btn btn-primary btn-block">Отправить</button>
+					</form>
+				</div>
+
+				<div class="contact-miscinfo">
+					<h3>Дополнительная информация</h3>
+					<div class="contact-misc">
+						<p><strong>Для более быстрой связи со мной используйте <img src="{{ item.get_absolute_url }}/media/icons/con_address.png" width="24" height="24"> <a href="https://viber.click/79029230803" target="_blank">Viber</a> <img src="{{ item.get_absolute_url }}/media/icons/whatsapp.png" border="0" width="24" height="24"/> <a href="https://wa.me/79029230803" target="_blank">WhatsApp</a> <img src="{{ item.get_absolute_url }}/media/icons/telega.png" border="0" width="24" height="24" /><a href="https://telegram.im/@Aleksey_Mag" target="_blank">Telegram</a>, с помощью них вы также можете высылать мне свои фотографии и другие данные, это позволит мне более оперативно отвечать вам, так как я не имею возможности постоянно сидеть за компьютером и проверять почту.</p>
+						<p><strong>Записаться на очный прием в городе Красноярске вы можете по номерам:<img src="{{ item.get_absolute_url }}/media/icons/con_mobile.png" width="24" height="24"/><a href="tel:+79029230803">+7-902-923-08-03&nbsp;</a> и <img src="{{ item.get_absolute_url }}/media/icons/con_mobile.png" width="24" height="24"/><a href="tel:+73912930803">+7 (391) 293-08-03</a>.</span></strong>
+						<p><strong>Если у вас нет возможности приехать ко мне лично, вы можете задать интересующие вас вопросы по электронной почте <img src="{{ item.get_absolute_url }}/media/icons/email.png" width="24" height="24"><a href="mailto:belo-mag@yandex.ru" target="_blank"> belo-mag@yandex.ru </a> позвонить мне в <img src="{{ item.get_absolute_url }}/media/icons/con_fax.png" border="0" width="24" height="24"/> Skype (логин <a href="skype:aborisov801?call" target="_blank"> aborisov801 </a>), или же связаться со мной с помощью форм обратной связи. Я свяжусь с вами при первой же возможности.</strong></p>
+						<div id="space-6">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<div id="space-7">
+
+		</div>
+</body>

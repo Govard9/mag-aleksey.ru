@@ -1,0 +1,105 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(28215921, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/28215921" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="маг борисов, алексей борисов, сибирский маг, сибирский колдун, белая магия, привороты, гадания" />
+  <title>Общая информация о сибирском маге Алексее Борисове.</title>
+  <meta name="description" content="Я маг Борисов Алексей Борисович и я смогу помочь вам в любой ситуации с помощью магии. Мои способности передались мне по наследству и я являюсь практикующим магом уже более 17 лет. За эти годы я смог помочь множеству людей, я не ставлю себе цели работать ради денег, моя цель – помощь людям, оказавшимся в трудной ситуации. Мои магические способности позволяют мне проводить работу дистанционно.">
+
+  <link rel="shortcut icon" type="image/png" href="{% static 'icons/favicon.ico' %}"/>
+
+</head>
+
+{% load news_tags %}
+{% get_list_categories as categories %}
+{% load news_popular_tags %}
+{% get_popular_news as popular_news %}
+{% include 'inc/_nav.html' %}
+
+<body>
+
+<div class="color-main">
+    <div id="col-m">
+        <div class="popular">
+            <h2>СВЕЖИЕ СТАТЬИ О МАГИИ</h2>
+        </div>
+        <div class="main">
+            {% for item in news %}
+            <div class="media">
+                <div class="media-title">
+                    {% if item.photo %}
+                    <a href="{{ item.get_absolute_url }}"><img src="{{ item.photo.url }}" alt="" width="200" height="180"></a>
+                    {% else %}
+                    <img src="https://picsum.photos/id/237/350/300" alt="">
+                    {% endif %}
+                    <a href="{{ item.get_absolute_url }}"><h5>{{ item.title }}</h5></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="color-main">
+            <div class="popular-1">
+                <h1>ПОПУЛЯРНЫЕ СТАТЬИ О МАГИИ</h1>
+            </div>
+            <div class="main">
+                {% for item in popular_news %}
+                <div class="media">
+                    <div class="media-title">
+                        {% if item.photo %}
+                        <a href="{{ item.get_absolute_url }}"><img src="{{ item.photo.url }}" alt="" width="200" height="180"></a>
+                        {% else %}
+                        <img src="https://picsum.photos/id/237/350/300" alt="">
+                        {% endif %}
+                        <a href="{{ item.get_absolute_url }}"><h5>{{ item.title }}</h5></a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div id="space-4">
+
+            </div>
+            <div id="popular-2">
+                <h3>ПОПУЛЯРНЫЕ КАТЕГОРИИ СТАТЕЙ О МАГИИ</h3>
+            </div>
+            <div class="main2">
+                {% for item in categories %}
+                <div class="media2">
+                    <div class="media-title2">
+                        {% if item.photo_category.url %}
+                        <a href="{% url 'category' item.slug %}"><img src="{{ item.photo_category.url }}" alt="" width="220" height="200"></a>
+                        {% else %}
+                        <img src="https://picsum.photos/id/237/350/300" alt="">
+                        {% endif %}
+                        <a href="{% url 'category' item.slug %}"><h5>{{ item.title }}</h5></a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<div id="space-5">
+
+</div>
+</body>

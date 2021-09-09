@@ -1,0 +1,68 @@
+  {% extends 'base.html' %}
+
+
+  {% block title %}{{ news_item.title }}{% endblock %}
+  {% block description %}{{ news_item.content | striptags | safe | truncatechars:250  }}{% endblock %}
+
+{% block sidebar %}
+
+  <div class="col-sm" id="search">
+      <form class="well form-search" id="form-search" action="{% url 'search' %}">
+          <input type="text" class="span3 search-query" placeholder="Поиск статей..." name="search">
+          <button class="btn"> Найти </button>
+      </form>
+  </div>
+
+{% include 'inc/_sidebar.html' %}
+
+{% endblock %}
+
+{% block content %}
+
+{% load news_detail_other %}
+{% other_articles as news %}
+
+<div class="card mb-3">
+    <div class="card-header" id="cat-views">
+        <p id="category-detail"> Категория: <a href="{{ news_item.category.get_absolute_url }}">{{ news_item.category }}</a></p>
+        <p id="views_detail">Просмотры: <span>{{ news_item.views }}</span></p>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title text-center">{{ news_item.title }}</h5>
+        {% if news_item.video %}
+        <iframe class="frame" width="560" height="315" src="{{ news_item.video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {% endif %}
+        <p class="card-text">{{ news_item.content | safe | linebreaks }}</p>
+
+        <div class="container">
+
+            <div class="pull-center" id="rt-logo-horoscope">
+                <img src="{{ news_item.photo.url }}" alt="" width="700" height="600">
+            </div>
+
+        </div>
+
+    </div>
+    <div class="card-footer text-muted">
+    </div>
+
+    <div class="card-body" id="detail-h3">
+        <h3>ЧИТАЙТЕ ДРУГИЕ СТАТЬИ:</h3>
+    </div>
+    <div class="main-detail">
+        {% for item in news %}
+        <div class="detail">
+            <div class="media-detail">
+                {% if item.photo %}
+                <a href="{{ item.get_absolute_url }}"><img src="{{ item.photo.url }}" alt="" width="200" height="180"></a>
+                {% endif %}
+                <div class="card-body">
+                    <a href="{{ item.get_absolute_url }}"><h5>{{ item.title }}</h5></a>
+                    <!--                <p class="card-text">{{ item.content | safe | linebreaks | truncatewords:50 }}</p>-->
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

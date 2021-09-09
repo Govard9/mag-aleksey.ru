@@ -1,0 +1,107 @@
+<!doctype html>
+{% load static %}
+
+{% load horoscope_order %}
+{% horoscope_ordering as category_order %}
+
+{% load last_horoscope %}
+{% last_article as last %}
+<html lang="ru">
+<head>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(28215921, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/28215921" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Гороскоп на неделю.</title>
+  <meta name="description" content="{% for article in last.last_pages %}{{ article.title }} Архив гороскопов.{% endfor %}" />
+
+  <link rel="shortcut icon" type="image/png" href="{% static 'icons/favicon.ico' %}"/>
+
+</head>
+
+{% include 'inc/_nav.html' %}
+
+<body>
+
+<div class="color-main-horoscope">
+    <div id="col-horoscope">
+
+        <div class="popular-horoscope">
+            <h2>Гороскоп</h2>
+        </div>
+
+        {% for article in last.last_pages %}
+
+        <div class="card mb-3" id="main-card-horoscope">
+            <div class="card-header" id="cat-views">
+                <p id="category-detail"> Месяц: <a href="{{ article.category_horoscopes.get_absolute_url }}">{{ article.category_horoscopes.title }}</a></p>
+            </div>
+            <div class="card-body-horoscope">
+                <h5 id="horoscope-title" class="card-title text-center">{{ article.title }}</h5>
+                <p class="card-text">{{ article.content | safe | linebreaks }}</p>
+
+                <div class="container">
+
+                    <div class="pull-left" id="rt-logo-horoscope">
+                        <img src="{{ article.photo.url }}" alt="" width="700" height="600">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="popular-horoscope">
+                <h2>Архив гороскопов</h2>
+            </div>
+
+        <div id="horoscope-flex">
+
+            <div class="main-horoscope">
+                {% for category in categories %}
+                <div class="media-horoscope">
+                <h3><a href="{{ category.get_absolute_url }}">{{ category }}</a></h3>
+                    {% if category.horoscopes.all %}
+                        {% for horoscope in category.horoscopes.all %}
+                        <a href="{{ horoscope.get_absolute_url }}"><h4>{{ horoscope }}</h4></a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="main-horoscope2">
+                {% for category in category_order %}
+                <div class="media-horoscope2">
+                <h3><a href="{{ category.get_absolute_url }}">{{ category }}</a></h3>
+                    {% if category.horoscopes.all %}
+                        {% for horoscope in category.horoscopes.all %}
+                        <a href="{{ horoscope.get_absolute_url }}"><h4>{{ horoscope }}</h4></a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<div id="space-5">
+
+</div>
+</body>

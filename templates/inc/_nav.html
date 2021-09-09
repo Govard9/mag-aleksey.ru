@@ -1,0 +1,172 @@
+<!doctype html>
+{% load static %}
+{% load cache %}
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(28215921, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/28215921" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    
+</head>
+
+<body>
+
+{% cache 10 leadback %}
+<!-- Begin LeadBack code {literal} -->
+<script>
+    var _emv = _emv || [];
+    _emv['campaign'] = '74a3faa048e151a2f85694da';
+
+    (function() {
+        var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+        em.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'leadback.ru/js/leadback.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+    })();
+</script>
+<!-- End LeadBack code {/literal} -->
+{% endcache %}
+
+<div id="background">
+<div id="space3">
+
+</div>
+    <div class="container" id="image">
+        <div class="row" id="opacity">
+
+            <div class="pull-left" id="rt-logo">
+                <a href="{% url 'home' %}"><img src="{{ item.get_absolute_url }}/media/logo2.png" class="logo" alt=""></a>
+            </div>
+
+            <div class="custom" id="number">
+                <p class="caption"><strong><span><em>Отвечу на все вопросы по телефону:</em></span></strong></p>
+                <a href="tel:+79029230803"><p class="caption"><strong><span><em>+7 (902) 923-08-03&nbsp;</em></span></strong></p></a>
+                <p class="caption"><strong><span><em>Viber, WhatsApp, Telegram&nbsp;</em></span></strong></p>
+            </div>
+
+                <div id="carouselExampleControls" class="carousel slide col-md-6" data-ride="carousel">
+                    <div class="carousel-inner" id="transparent">
+                        <div class="carousel-item active">
+                            <h4><a target="_blank" title="Практическая магия" href="#">Практическая магия</a></h4>
+                            <p>Услуги практической магии носят большую популярность. С помощью сеансов практической магии вы можете заглянуть в будущее, узнать важные жизненные события, которые вас ждут, а также провести...</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h4><a target="_blank" title="Магия денег" href="#">Магия денег</a></h4>
+                            <p>В наше время без денег обойтись невозможно. Но довольно много людей с трудом сводят «концы с концами». Если в течении долгого времени у вас нету денег, во многих случаях это означает что у вас...</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h4><a target="_blank" title="Приворот в Красноярске." href="#">Приворот в Красноярске.</a></h4>
+                            <p>Приворот по фотографии в Красноярске. Сердечный приворот. Приворот по семи чакрам.
+                                Желаете сделать приворот в Красноярске? Вернуть мужа? Вернуть жену? Восстановить семью? Ознакомьтесь со списком...</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h4><a target="_blank" title="Заговоры от одиночества" href="#">Заговоры от одиночества</a></h4>
+                            <p>Все ритуалы, обряды и заговоры от одиночества являются довольно простыми, но в тоже время эффективными и быстрыми в исполнении, поэтому совершить их сможет практически каждый желающий.
+                                Прежде, чем...</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h4><a target="_blank" title="Гадание в Красноярске" href="#">Гадание в Красноярске</a></h4>
+                            <p>С помощью гадания вы сможете заглянуть в будущее, узнать замыслы партнера и принять решение в сложной ситуации. Запишитесь на гадание в Красноярске и приоткройте занавесу будущего!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="carouselExampleSlidesOnly" class="carousel slide col-md-4" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{{ item.get_absolute_url }}/media/nav_photos/IMG_5728.JPG" class="yjisImg" alt="" width="350" height="230">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ item.get_absolute_url }}/media/nav_photos/IMG_5711.JPG" class="yjisImg" alt="" width="350" height="230">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ item.get_absolute_url }}/media/nav_photos/_DSC0227.(1).jpg" class="yjisImg" alt="" width="350" height="230">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ item.get_absolute_url }}/media/nav_photos/IMG_5723.JPG" class="yjisImg" alt="" width="350" height="230">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ item.get_absolute_url }}/media/nav_photos/_DSC0223.jpg" class="yjisImg" alt="" width="350" height="230">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ item.get_absolute_url }}/media/nav_photos/_DSC0218.jpg" class="yjisImg" alt="" width="350" height="230">
+                        </div>
+                    </div>
+                </div>
+
+
+
+            <div class="container" id="menu">
+                <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">Обо мне</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'services' %}">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'payment' %}">Оплата</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'reviews' %}">Отзывы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'video-reviews' %}">Видеоотзывы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'articles' %}">Статьи</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'horoscopes' %}">Гороскоп на неделю</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#chatopen">Онлайн-консультации</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'besplatnyj-privorot' %}">Бесплатный приворот</a>
+                    </li>
+                    <!--        <li class="nav-item">-->
+                    <!--            {% comment %} {% if request.user.is_authenticated %} {% endif %}-->
+                    <!--                <li id="add_news"><a href="{% url 'add_news' %}">Добавить новость</a></li>-->
+                    <!--            {% endcomment %}-->
+                    <!--        </li>-->
+                </ul>
+            </div>
+        </div>
+        <div class="row" id="opacity">
+            <div id="space">
+
+            </div>
+        </div>
+    </div>
+<div id="space2">
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>

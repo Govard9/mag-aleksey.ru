@@ -1,0 +1,83 @@
+<!doctype html>
+{% load static %}
+
+{% load news_detail_other %}
+{% other_articles as news %}
+
+<html lang="ru">
+<head>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(28215921, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/28215921" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="shortcut icon" type="image/png" href="{% static 'icons/favicon.ico' %}"/>
+
+  <title>{{ horoscopes_items.title }}</title>
+  <meta name="description" content="{{ horoscopes_items.content | striptags | safe | truncatechars:300  }}" />
+
+</head>
+
+{% include 'inc/_nav.html' %}
+
+
+<body>
+
+<div class="card mb-3" id="main-card-horoscope">
+    <div class="card-header" id="cat-views">
+        <p id="category-detail"> Месяц: <a href="{{ horoscopes_items.category_horoscopes.get_absolute_url }}">{{ horoscopes_items.category_horoscopes.title }}</a></p>
+        <p id="views_detail">Просмотры: <span>{{ horoscopes_items.views }}</span></p>
+    </div>
+    <div class="card-body-horoscope">
+        <h5 class="card-title text-center">{{ horoscopes_items.title }}</h5>
+        <p class="card-text">{{ horoscopes_items.content | safe | linebreaks }}</p>
+
+        <div class="container">
+
+            <div class="pull-left" id="rt-logo-horoscope">
+                <img src="{{ horoscopes_items.photo.url }}" alt="" width="700" height="600">
+            </div>
+        </div>
+    </div>
+        <div class="card-footer text-muted">
+        </div>
+
+        <div class="card-body" id="detail-h3">
+            <h3>ЧИТАЙТЕ ДРУГИЕ СТАТЬИ:</h3>
+        </div>
+        <div class="main-detail">
+            {% for item in news %}
+            <div class="detail">
+                <div class="media-detail">
+                    {% if item.photo %}
+                    <a href="{{ item.get_absolute_url }}"><img src="{{ item.photo.url }}" alt="" width="200" height="180"></a>
+                    {% endif %}
+                    <div class="card-body">
+                        <a href="{{ item.get_absolute_url }}"><h5>{{ item.title }}</h5></a>
+                        <!--                <p class="card-text">{{ item.content | safe | linebreaks | truncatewords:50 }}</p>-->
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div id="space-8">
+
+</div>
+</body>

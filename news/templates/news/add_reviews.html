@@ -1,0 +1,65 @@
+<!doctype html>
+{% load static recaptcha3 %}
+<html lang="ru">
+<head>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(28215921, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/28215921" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Добавление отзывов о сибирском маге Борисове Алексее Борисовиче." />
+
+  <link rel="shortcut icon" type="image/png" href="{% static 'icons/favicon.ico' %}"/>
+
+  <title>Добавление отзыва</title>
+
+{% recaptcha_init %}
+{% recaptcha_ready action_name='homepage' %}
+
+</head>
+
+{% include 'inc/_nav.html' %}
+
+<body>
+
+<div class="color-add-reviews">
+    <div id="col-add-reviews">
+
+        <div id="item-add-reviews">
+            <div class="add-reviews-div">
+
+                <div>
+                    <h1>Добавление отзыва о работе мага Алексея Борисова</h1>
+
+                    <form action="{% url 'add_reviews' %}" method="post">
+                        {% csrf_token %}
+
+
+                        {{ form.as_p }}
+
+
+                        <button type="submit" id="button-add-reviews" class="btn btn-primary btn-block">Добавить новость</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="space-7">
+
+	</div>
+</body>

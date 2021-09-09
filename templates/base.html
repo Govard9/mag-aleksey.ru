@@ -1,0 +1,113 @@
+<!doctype html>
+{% load static %}
+
+<html lang="ru">
+<head>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(28215921, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/28215921" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>{% block title %}{{ news.title }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{% endblock %}" />
+
+
+  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="shortcut icon" type="image/png" href="{% static 'icons/favicon.ico' %}"/>
+
+</head>
+
+<body>
+
+{% include 'inc/_nav.html' %}
+
+<div class="container mt-3" id="back-art">
+  <div class="row" id="category">
+    <div class="col-md-3">
+        {% block sidebar %}{% endblock %}
+    </div>
+    <div class="col-md-9" id="base-bottom">
+
+      {% if messages %}
+
+      {% for message in messages %}
+
+        {% if message.tags  == 'error' %}
+          <div class="alert danger" role="alert">
+            {{ message }}
+          </div>
+        {% else %}
+          <div class="alert alert-{{ message.tags }}" role="alert">
+            {{ message }}
+          </div>
+        {% endif %}
+
+      {% endfor %}
+
+      {% endif %}
+
+        {% block content %}{% endblock %}
+
+      {% if page_obj.has_other_pages %}
+      <nav aria-label="Page navigation example" id="paginator">
+        <ul class="pagination">
+
+          {% if page_obj.has_previous %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">Назад</a>
+          </li>
+          {% endif %}
+
+          {% for p in page_obj.paginator.page_range %}
+
+          {% if page_obj.number == p %}
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="?page={{ p }}">{{ p }}<span class="sr-only">(current)</span></a>
+          </li>
+          {% elif p > page_obj.number|add:-3 and p < page_obj.number|add:3 %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ p }}">{{ p }}</a>
+          </li>
+          {% endif %}
+
+          {% endfor %}
+
+          {% if page_obj.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}">Вперед</a>
+          </li>
+          {% endif %}
+
+        </ul>
+      </nav>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+<div id="space-5">
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>
