@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'j0h@$@iz89707d#=(dxyq3m8-jey*o+93-%fy^7!i=&4-sg$ax'
+SECRET_KEY = 'не покажу'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -81,14 +81,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
    'default': {
-       'ENGINE': 'django.db.backends.mysql',
-       'NAME': 'belomakk_db',
-       'USER': 'root',
-       'PASSWORD': 'root',
+       'ENGINE': 'не покажу',
+       'NAME': 'не покажу',
+       'USER': 'не покажу',
+       'PASSWORD': 'не покажу',
        'HOST': 'localhost',
-
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -145,8 +142,8 @@ INTERNAL_IPS = ['127.0.0.1']
 # Форма обратной связи
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'belo-mag@yandex.ru'
-EMAIL_HOST_PASSWORD = 'Adapter60240HD'
+EMAIL_HOST_USER = 'не покажу'
+EMAIL_HOST_PASSWORD = 'не покажу'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
@@ -233,7 +230,7 @@ CACHES = {
 }
 
 #Каптча версия 3
-RECAPTCHA_PRIVATE_KEY = '6LdGrFMaAAAAAOic3IfX7_Grqynevzb-UQq69CN9'
-RECAPTCHA_PUBLIC_KEY = '6LdGrFMaAAAAAELcGvfww9OJMEYR1X8v4KdYxOgh'
+RECAPTCHA_PRIVATE_KEY = 'не покажу'
+RECAPTCHA_PUBLIC_KEY = 'не покажу'
 RECAPTCHA_DEFAULT_ACTION = 'generic'
 RECAPTCHA_SCORE_THRESHOLD = 0.5
